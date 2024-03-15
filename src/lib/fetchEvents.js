@@ -12,7 +12,8 @@ const fetchEvents = async (days = 10) => {
 
 		const data = await response.json();
 		if(!data || !data.events) return console.error("Fetch error, no proper data found.");
-		
+
+		console.log(data);
 		return data?.events ?? [];
 	} catch (error) {
 		console.error(error);

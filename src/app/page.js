@@ -12,18 +12,20 @@ const Page = () => {
 	const [days, setDays] = useState(10);
 
 	useEffect(() => {
-		handleEvents();
+		setInterval(() => {
+			handleEvents();
+		});
 	}, [days]);
 
 	const handleEvents = async () => {
 		const data = await fetchEvents(days);
+		console.log(data);
 		setEvents(data);
 		setIsLoading(false);
 	}
 
 	if(isLoading === true) return (<>Loading...</>);
-	
-	return (
+	else return (
 		<div>
 			{
 				events?.map((event, i) => (
