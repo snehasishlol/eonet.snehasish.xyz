@@ -1,0 +1,19 @@
+:root {
+	--background: #000;
+	--background-alpha: rgba(255, 255, 255, 0.1);
+	--text: rgba(255, 255, 255, 0.9);
+	--text-light: rgba(255, 255, 255, 0.7);
+	--border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body {
+	background: var(--background);
+	color: var(--text);
+}
